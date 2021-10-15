@@ -1,0 +1,43 @@
+.page
+{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    left: 0;  
+}
+
+.btn
+{
+    padding-left: 1rem;
+}
+
+.block
+{
+    height: 100%;
+    display: flex;
+    margin-bottom: 100px;
+    margin-top: 100px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+.scroll
+{
+    height: 50px;
+    display: flex;
+    margin-bottom: 15px;
+    margin-top: 15px;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    width: 100%;
+    color: #f8f8fa;
+}
