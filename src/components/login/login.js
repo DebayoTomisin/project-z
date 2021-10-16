@@ -4,7 +4,7 @@ import * as Yup from 'yup'
 import Logo from '../../assets/logo.svg'
 import { ButtonLoader } from '../loaders/loaders'
 import './login.css'
-import { Redirect, useHistory } from 'react-router-dom'
+import { Redirect, useHistory, Link } from 'react-router-dom'
 
 const Login = () =>
 {
@@ -14,8 +14,10 @@ const Login = () =>
 	return(
 		<div className="my-8 mx-2">
 			<div className="flex justify-center items-center">
-				<img src={Logo} alt='logo' className="w-10 md:w-24" />
-				<h1 className="text-xl">Project Z</h1>
+				<Link to='/'>
+					<img src={Logo} alt='logo' className="w-10 md:w-24" />
+					<h1 className="text-xl">Project Z</h1>
+				</Link>
 			</div>
 			<Formik
 				initialValues={{ email: "", password: "" }}
