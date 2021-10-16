@@ -9,7 +9,7 @@ const ProtectedRoutes = ({component: Component, ...rest}) =>
     const history = useHistory()
     return (
         <Route {...rest} render={props => (
-        isAuthenticated === true ? (
+        isAuthenticated == 'true' ? (
           < Component  {...props} />
           ) : (
                 history.push('/login') 
