@@ -2,7 +2,6 @@ import React, {lazy, Suspense, } from "react";
 import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-dom';
 import { PageLoader } from "../components/loaders/loaders";
 import AuthRoute from "./AuthRoute";
-import PrivateRoute from "./PrivateRoute";
 import ProtectedRoutes from "./protectedRoutes";
 
 const Login = lazy(() => import('../components/login/login'))
@@ -13,8 +12,6 @@ const AddItems = lazy(() => import('../components/addItems'))
 const TestRoutes = () =>
 {
     const isAuthenticated  = sessionStorage.getItem('authenticated')
-    console.log(isAuthenticated)
-    const auth = sessionStorage.getItem('auth-keys')
     return(
         <>
             <Router>
