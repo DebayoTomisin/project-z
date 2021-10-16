@@ -1,11 +1,12 @@
 import React, { useState } from "react";
-import { Redirect } from "react-router-dom";
+import { Redirect, useHistory } from "react-router-dom";
 import Layout from "../layout";
 import { data } from "../data";
 
 
 const AddCategories = () =>
 {
+    const history = useHistory()
     const [category, setCategory] = useState('')
     const [disabled, setDisabled] = useState(true)
 
@@ -16,9 +17,7 @@ const AddCategories = () =>
         else{
             data[category] = []
             console.log(category)
-            return(
-                <Redirect to='/' />
-            )
+            history.push('/')
         }
         
     }

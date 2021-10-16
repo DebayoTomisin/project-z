@@ -1,9 +1,11 @@
 import React, { useState } from 'react'
+import { useHistory } from 'react-router-dom'
 import Layout from '../layout'
 import { data } from '../data'
 
 const AddItems = () =>
 {
+    const history = useHistory()
     const [values, setValues] = useState({
         name: '',
         desc: '',
@@ -26,6 +28,7 @@ const AddItems = () =>
             const name = values.name
             const desc = values.desc
             data[values.category].push({ name, desc})
+            history.push('/')
         }
     }
     
