@@ -14,7 +14,7 @@ const PrivateRoute = ({ Component, exact,  isAuthenticated, ...rest}) =>
             );
           }
           else {
-            return <Redirect to="/login" />;
+            return <Redirect exact to="/login" />;
           }
           
         }}

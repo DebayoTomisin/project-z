@@ -23,6 +23,7 @@ const Login = () =>
 					console.log("Logging in", values);
 					sessionStorage.setItem('auth-keys', Math.random())
 					sessionStorage.setItem('authenticated', true)
+					history.push('/')
 				}}
 
 				validationSchema={Yup.object().shape({

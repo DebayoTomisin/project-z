@@ -3,6 +3,7 @@ import { BrowserRouter as Router, Switch, Route, Redirect } from 'react-router-d
 import { PageLoader } from "../components/loaders/loaders";
 import AuthRoute from "./AuthRoute";
 import PrivateRoute from "./PrivateRoute";
+import ProtectedRoutes from "./protectedRoutes";
 
 const Login = lazy(() => import('../components/login/login'))
 const Dashboard = lazy(() => import('../entry'))
@@ -21,8 +22,8 @@ const TestRoutes = () =>
                     <Switch>
                         <AuthRoute exact path='/login' component={Login} isAuthenticated={isAuthenticated} />
                         <Route exact path='/' component={Dashboard} />
-                        <PrivateRoute exact path= '/addcategories' component={AddCategories} isAuthenticated={isAuthenticated} />
-                        <PrivateRoute exact path='/additems' component={AddItems} isAuthenticated={isAuthenticated} />
+                        <ProtectedRoutes exact path= '/addcategories' component={AddCategories} isAuthenticated={isAuthenticated} />
+                        <ProtectedRoutes exact path='/additems' component={AddItems} isAuthenticated={isAuthenticated} />
                         <Route render={()=>(<h1>404 Not Found</h1>)} />
                     </Switch>
                 </Suspense>
